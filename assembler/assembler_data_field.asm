@@ -45,6 +45,8 @@ writeVec:	addi	$v0, $t8, 0
 		sb	$a0, 0($s0)
 		addi	$s0, $s0, 1
 		addi	$a0, $zero, ' '
+		sb	$a0, 0($s0)
+		addi	$s0, $s0, 1
 		addi	$v0, $t9, 0
 		jal	hex_para_ascii
 		jal 	moveVec

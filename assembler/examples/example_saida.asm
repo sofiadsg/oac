@@ -1,5 +1,8 @@
 .data
 a: .word 1, 2, 3
+b: .word 4, 5, 6
+
+c: .word 7,8,9
 
 .text
 li $t0, 0x10010000
