@@ -163,6 +163,22 @@ refer to the applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 912 664 1088 680)
+	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
+	(text "Overflow" (rect 90 0 133 10)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 464 240 528 288)
 	(text "AND2" (rect 1 0 29 9)(font "Arial" (font_size 6)))
@@ -396,6 +412,56 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 80 144))
 	)
 )
+(symbol
+	(rect 800 640 896 768)
+	(text "overflowcheck" (rect 5 0 92 14)(font "Intel Clear" (font_size 8)))
+	(text "inst1" (rect 8 112 32 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A" (rect 0 0 10 14)(font "Intel Clear" (font_size 8)))
+		(text "A" (rect 21 27 31 41)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B" (rect 0 0 9 14)(font "Intel Clear" (font_size 8)))
+		(text "B" (rect 21 43 30 57)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "SUB" (rect 0 0 27 14)(font "Intel Clear" (font_size 8)))
+		(text "SUB" (rect 21 59 48 73)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Cout" (rect 0 0 29 14)(font "Intel Clear" (font_size 8)))
+		(text "Cout" (rect 21 75 50 89)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "RES" (rect 0 0 23 14)(font "Intel Clear" (font_size 8)))
+		(text "RES" (rect 21 91 44 105)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "OV" (rect 0 0 20 14)(font "Intel Clear" (font_size 8)))
+		(text "OV" (rect 55 27 75 41)(font "Intel Clear" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 112))
+	)
+)
 (connector
 	(pt 472 312)
 	(pt 288 312)
@@ -449,10 +515,6 @@ refer to the applicable agreement for further details.
 	(pt 568 280)
 )
 (connector
-	(pt 632 448)
-	(pt 632 296)
-)
-(connector
 	(pt 656 544)
 	(pt 656 312)
 )
@@ -489,10 +551,6 @@ refer to the applicable agreement for further details.
 	(pt 200 232)
 )
 (connector
-	(pt 328 520)
-	(pt 200 520)
-)
-(connector
 	(pt 528 264)
 	(pt 768 264)
 )
@@ -521,24 +579,12 @@ refer to the applicable agreement for further details.
 	(pt 712 48)
 )
 (connector
-	(pt 616 464)
-	(pt 880 464)
-)
-(connector
 	(pt 288 256)
 	(pt 288 312)
 )
 (connector
-	(pt 288 312)
-	(pt 288 456)
-)
-(connector
 	(pt 272 272)
 	(pt 272 328)
-)
-(connector
-	(pt 272 328)
-	(pt 272 504)
 )
 (connector
 	(pt 192 256)
@@ -560,7 +606,83 @@ refer to the applicable agreement for further details.
 	(pt 408 480)
 	(pt 520 480)
 )
+(connector
+	(pt 616 464)
+	(pt 728 464)
+)
+(connector
+	(pt 728 464)
+	(pt 728 720)
+)
+(connector
+	(pt 728 720)
+	(pt 800 720)
+)
+(connector
+	(pt 288 312)
+	(pt 288 456)
+)
+(connector
+	(pt 288 672)
+	(pt 800 672)
+)
+(connector
+	(pt 288 456)
+	(pt 288 672)
+)
+(connector
+	(pt 800 688)
+	(pt 272 688)
+)
+(connector
+	(pt 272 328)
+	(pt 272 504)
+)
+(connector
+	(pt 272 504)
+	(pt 272 688)
+)
+(connector
+	(pt 800 704)
+	(pt 248 704)
+)
+(connector
+	(pt 248 704)
+	(pt 248 520)
+)
+(connector
+	(pt 200 520)
+	(pt 248 520)
+)
+(connector
+	(pt 248 520)
+	(pt 328 520)
+)
+(connector
+	(pt 632 736)
+	(pt 800 736)
+)
+(connector
+	(pt 632 296)
+	(pt 632 448)
+)
+(connector
+	(pt 632 448)
+	(pt 632 736)
+)
+(connector
+	(pt 752 800)
+	(pt 744 800)
+)
+(connector
+	(pt 912 672)
+	(pt 896 672)
+)
 (junction (pt 288 312))
 (junction (pt 272 328))
 (junction (pt 288 256))
 (junction (pt 272 272))
+(junction (pt 288 456))
+(junction (pt 272 504))
+(junction (pt 248 520))
+(junction (pt 632 448))

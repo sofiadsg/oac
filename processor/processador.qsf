@@ -54,3 +54,4 @@ set_global_assignment -name BDF_FILE adder.bdf
 set_global_assignment -name BDF_FILE mux.bdf
 set_global_assignment -name BDF_FILE lastUla.bdf
 set_global_assignment -name BDF_FILE overflow_check.bdf
+set_global_assignment -name BDF_FILE TEST.bdf
